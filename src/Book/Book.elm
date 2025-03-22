@@ -1,7 +1,9 @@
 module Book.Book exposing (..)
 
-import Book.Typography exposing (docs, docsMd)
-import ElmBook exposing (..)
+import Book.Input as Input
+import Book.Typography as Typography
+import ElmBook exposing (withChapterGroups)
+import ElmBook.ElmCSS exposing (..)
 
 
 main : Book ()
@@ -9,8 +11,8 @@ main =
     book "Components"
         |> withChapterGroups
             [ ( "Typography"
-              , [ docs
-                , docsMd
+              , [ Typography.docs
                 ]
               )
+            , ( "Input", [ Input.docs ] )
             ]

@@ -1,5 +1,4 @@
-import './style.css'
-
+import "./style.css"
 import { Elm } from './Book/Book.elm'
 
 Elm.Book.Book.init({
